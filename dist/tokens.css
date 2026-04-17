@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Fri, 17 Apr 2026 14:30:36 GMT
+ * Generated on Fri, 17 Apr 2026 14:42:34 GMT
  */
 
 :root {
@@ -23,7 +23,6 @@
   --bg-light-subtle: rgba(226, 231, 235, 0.2);
   --bg-hover-alt: rgba(218, 222, 224, 0.2);
   --interaction-selected-background: rgba(0, 131, 210, 0.2);
-  --interaction-ishover: false;
   --charts-series-1: #376df5;
   --charts-series-2: #64dfdf;
   --charts-series-3: #f68769;
@@ -37,14 +36,11 @@
   --border-divider-in-card: rgba(34, 36, 38, 0.1);
   --border-transparent: rgba(255, 255, 255, 0);
   --blue-gradient: rgba(29, 117, 188, 0.56);
-  --enable-dark-mode: false;
-  --enable-shadows: true;
-  --enable-gradients: true;
 }
 
 /**
  * Do not edit directly
- * Generated on Fri, 17 Apr 2026 14:30:36 GMT
+ * Generated on Fri, 17 Apr 2026 14:42:34 GMT
  */
 
 [data-theme="dark"] {
@@ -66,7 +62,6 @@
   --bg-danger-subtle: rgba(255, 193, 193, 0.2);
   --bg-light-subtle: rgba(23, 23, 23, 0.2);
   --interaction-selected-background: rgba(45, 189, 255, 0.2);
-  --interaction-ishover: false;
   --charts-series-1: #376df5;
   --charts-series-2: #64dfdf;
   --charts-series-3: #f68769;
@@ -80,7 +75,4 @@
   --border-divider-in-card: rgba(34, 36, 38, 0.9);
   --border-transparent: rgba(255, 255, 255, 0);
   --blue-gradient: rgba(185, 228, 254, 0.56);
-  --enable-dark-mode: true;
-  --enable-shadows: true;
-  --enable-gradients: true;
 }
