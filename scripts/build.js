@@ -23,9 +23,7 @@ console.log('✓ Built dark tokens');
 
 // Step 4: Concatenate light + dark into dist/tokens.css
 const lightCss = readFileSync('dist/tokens-root.css', 'utf8');
-const darkCssRaw = readFileSync('dist/tokens-datathemedark.css', 'utf8');
-// Defensively replace :root with [data-theme="dark"] in case Style Dictionary ignores the selector option
-const darkCss = darkCssRaw.replace(/^:root\s*\{/, '[data-theme="dark"] {');
+const darkCss = readFileSync('dist/tokens-datathemedark.css', 'utf8');
 writeFileSync('dist/tokens.css', lightCss + '\n' + darkCss);
 
 // Clean up intermediary files
