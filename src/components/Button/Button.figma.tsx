@@ -5,7 +5,7 @@ import { Button } from './Button';
  * Replace FIGMA_COMPONENT_URL_HERE with the actual Figma component URL.
  * To find it: right-click the Button component in Figma → Copy link.
  */
-figma.connect(Button, 'FIGMA_COMPONENT_URL_HERE', {
+figma.connect(Button, 'https://www.figma.com/design/EM5KcfOyqRBsPTRkbvT5Kn/Component-Assembly-Design-System?node-id=1099-14336&m=dev', {
   props: {
     label: figma.string('Label'),
     variant: figma.enum('Variant', {
