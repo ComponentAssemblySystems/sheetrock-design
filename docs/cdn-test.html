@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sheetrock Token CDN Test</title>
+
+    <!--
+      Verification Step 3 — CDN Consumption
+      ──────────────────────────────────────
+      In production consumers link the GitHub Pages URL:
+        https://ComponentAssemblySystems.github.io/sheetrock-design-system/dist/tokens.css
+
+      This file uses a relative path so it works opened directly from disk
+      or served via `npx serve` from the repo root.
+    -->
+    <link rel="stylesheet" href="../dist/tokens.css" />
+
+    <style>
+      *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+      body {
+        font-family: system-ui, sans-serif;
+        background-color: var(--cas-white);
+        color: var(--cas-black);
+        padding: 2rem;
+        transition: background-color 0.2s, color 0.2s;
+      }
+
+      [data-theme="dark"] body {
+        background-color: var(--cas-black);
+        color: var(--cas-white);
+      }
+
+      header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 2.5rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid var(--border-divider-in-card);
+      }
+
+      h1 { font-size: 1.25rem; font-weight: 600; }
+      h2 { font-size: 0.75rem; font-weight: 600; text-transform: uppercase;
+           letter-spacing: 0.08em; margin-bottom: 1rem; opacity: 0.5; }
+
+      #theme-toggle {
+        appearance: none;
+        cursor: pointer;
+        border: 1px solid var(--border-divider-in-card);
+        border-radius: 6px;
+        padding: 0.4rem 0.85rem;
+        font-size: 0.8rem;
+        font-weight: 500;
+        background: var(--bg-primary-subtle);
+        color: var(--cf-blue-dark);
+        transition: background 0.15s;
+      }
+      #theme-toggle:hover { background: var(--interaction-selected-background); }
+
+      .section { margin-bottom: 2.5rem; }
+
+      .swatch-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+        gap: 0.75rem;
+      }
+
+      .swatch {
+        border-radius: 8px;
+        overflow: hidden;
+        border: 1px solid var(--border-divider-in-card);
+      }
+
+      .swatch-color { height: 56px; width: 100%; }
+
+      .swatch-label {
+        padding: 0.5rem 0.65rem;
+        font-size: 0.72rem;
+        font-family: ui-monospace, monospace;
+        line-height: 1.4;
+        opacity: 0.75;
+      }
+
+      .series-strip { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+
+      .series-chip {
+        height: 32px;
+        flex: 1 1 60px;
+        border-radius: 6px;
+        min-width: 40px;
+      }
+
+      table { width: 100%; border-collapse: collapse; font-size: 0.8rem; }
+
+      th, td {
+        text-align: left;
+        padding: 0.55rem 0.75rem;
+        border-bottom: 1px solid var(--border-divider-in-card);
+      }
+
+      th { opacity: 0.5; font-weight: 600; text-transform: uppercase;
+           font-size: 0.7rem; letter-spacing: 0.06em; }
+
+      .color-dot {
+        display: inline-block;
+        width: 12px; height: 12px;
+        border-radius: 50%;
+        margin-right: 0.5rem;
+        vertical-align: middle;
+        border: 1px solid var(--border-divider-in-card);
+      }
+
+      .pass { color: #22c55e; font-weight: 600; }
+      .fail { color: #ef4444; font-weight: 600; }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h1>Sheetrock Design System — Token CDN Test</h1>
+      <button id="theme-toggle" onclick="toggleTheme()">Toggle dark mode</button>
+    </header>
+
+    <section class="section">
+      <h2>Brand Primitives</h2>
+      <div class="swatch-grid">
+        <div class="swatch">
+          <div class="swatch-color" style="background: var(--cas-yellow);"></div>
+          <div class="swatch-label">--cas-yellow</div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background: var(--cas-white); border: 1px solid var(--border-divider-in-card);"></div>
+          <div class="swatch-label">--cas-white</div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background: var(--cas-black);"></div>
+          <div class="swatch-label">--cas-black</div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background: var(--cas-brown);"></div>
+          <div class="swatch-label">--cas-brown</div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background: var(--cf-blue-light);"></div>
+          <div class="swatch-label">--cf-blue-light</div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background: var(--cf-blue-dark);"></div>
+          <div class="swatch-label">--cf-blue-dark</div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background: var(--cf-purple);"></div>
+          <div class="swatch-label">--cf-purple</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Background Tokens</h2>
+      <div class="swatch-grid">
+        <div class="swatch">
+          <div class="swatch-color" style="background: var(--bg-primary-subtle);"></div>
+          <div class="swatch-label">--bg-primary-subtle</div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background: var(--bg-accent-subtle);"></div>
+          <div class="swatch-label">--bg-accent-subtle</div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background: var(--bg-info-subtle);"></div>
+          <div class="swatch-label">--bg-info-subtle</div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background: var(--bg-success-subtle);"></div>
+          <div class="swatch-label">--bg-success-subtle</div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background: var(--bg-warning-subtle);"></div>
+          <div class="swatch-label">--bg-warning-subtle</div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background: var(--bg-danger-subtle);"></div>
+          <div class="swatch-label">--bg-danger-subtle</div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background: var(--bg-hover-alt);"></div>
+          <div class="swatch-label">--bg-hover-alt</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Chart Series</h2>
+      <div class="series-strip">
+        <div class="series-chip" style="background: var(--charts-series-1);"></div>
+        <div class="series-chip" style="background: var(--charts-series-2);"></div>
+        <div class="series-chip" style="background: var(--charts-series-3);"></div>
+        <div class="series-chip" style="background: var(--charts-series-4);"></div>
+        <div class="series-chip" style="background: var(--charts-series-5);"></div>
+        <div class="series-chip" style="background: var(--charts-series-6);"></div>
+        <div class="series-chip" style="background: var(--charts-series-7);"></div>
+        <div class="series-chip" style="background: var(--charts-series-8);"></div>
+        <div class="series-chip" style="background: var(--charts-series-9);"></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Runtime Token Check</h2>
+      <p style="font-size: 0.8rem; margin-bottom: 1rem; opacity: 0.6;">
+        Reads computed values at runtime via <code>getComputedStyle</code> and
+        validates them against expected values from <code>dist/tokens.css</code>.
+        Toggle dark mode to re-run against dark values.
+      </p>
+      <table id="check-table">
+        <thead>
+          <tr><th>Token</th><th>Expected</th><th>Computed</th><th>Result</th></tr>
+        </thead>
+        <tbody id="check-body"></tbody>
+      </table>
+    </section>
+
+    <script>
+      function toggleTheme() {
+        const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+        document.documentElement.setAttribute('data-theme', isDark ? '' : 'dark');
+        runChecks();
+      }
+
+      const LIGHT_CHECKS = [
+        { token: '--cas-yellow',        expected: '#cda871' },
+        { token: '--cas-white',         expected: '#ffffff' },
+        { token: '--cas-black',         expected: '#262522' },
+        { token: '--cf-blue-light',     expected: '#00adef' },
+        { token: '--cf-blue-dark',      expected: '#1d75bc' },
+        { token: '--cf-purple',         expected: '#2c2f75' },
+        { token: '--charts-series-1',   expected: '#376df5' },
+        { token: '--charts-series-2',   expected: '#64dfdf' },
+      ];
+
+      const DARK_CHECKS = [
+        { token: '--cas-yellow',        expected: '#ffd28f' },
+        { token: '--cf-blue-dark',      expected: '#269eff' },
+        { token: '--cf-purple',         expected: '#5f65ff' },
+        { token: '--charts-series-5',   expected: '#fdd07a' },
+      ];
+
+      function hexToRgb(hex) {
+        const r = parseInt(hex.slice(1, 3), 16);
+        const g = parseInt(hex.slice(3, 5), 16);
+        const b = parseInt(hex.slice(5, 7), 16);
+        return `rgb(${r}, ${g}, ${b})`;
+      }
+
+      function runChecks() {
+        const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+        const checks = isDark ? DARK_CHECKS : LIGHT_CHECKS;
+        const tbody = document.getElementById('check-body');
+        const thead = document.querySelector('#check-table thead tr');
+
+        thead.innerHTML = `<th>Token</th><th>Expected (${isDark ? 'dark' : 'light'})</th><th>Computed</th><th>Result</th>`;
+        tbody.innerHTML = '';
+
+        let allPass = true;
+
+        checks.forEach(({ token, expected }) => {
+          const computed = getComputedStyle(document.documentElement).getPropertyValue(token).trim();
+          const pass = computed === hexToRgb(expected) || computed === expected;
+          if (!pass) allPass = false;
+
+          const tr = document.createElement('tr');
+          tr.innerHTML = `
+            <td><code>${token}</code></td>
+            <td><span class="color-dot" style="background:${expected};"></span><code>${expected}</code></td>
+            <td><span class="color-dot" style="background:${computed};"></span><code>${computed || '(empty)'}</code></td>
+            <td class="${pass ? 'pass' : 'fail'}">${pass ? '✓ Pass' : '✗ Fail'}</td>
+          `;
+          tbody.appendChild(tr);
+        });
+
+        const summary = document.createElement('tr');
+        summary.innerHTML = `
+          <td colspan="3" style="text-align:right; font-weight:600;">Overall</td>
+          <td class="${allPass ? 'pass' : 'fail'}">${allPass ? '✓ All pass' : '✗ Failures found'}</td>
+        `;
+        tbody.appendChild(summary);
+      }
+
+      runChecks();
+    </script>
+  </body>
+</html>
