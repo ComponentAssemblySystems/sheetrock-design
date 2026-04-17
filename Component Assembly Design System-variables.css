@@ -1,0 +1,349 @@
+/* Generated CSS Variables - Dynamic Mode Switching Architecture */
+/* Auto-generated from Figma variable collections */
+/* Usage: Set data-theme attribute on container element to switch modes */
+
+/* ========================================= */
+/* FALLBACK VALUES (:root) */
+/* These are default values when no theme is active */
+/* Theme-specific selectors below will override these */
+/* ========================================= */
+
+:root {
+  --cas-yellow: rgb(205, 168, 113);
+  --cas-brown: rgb(14, 8, 0);
+  --cas-white: rgb(255, 255, 255);
+  --cas-black: rgb(38, 37, 34);
+  --cf-blue-light: rgb(0, 173, 239);
+  --cf-blue-dark: rgb(29, 117, 188);
+  --cf-purple: rgb(44, 47, 117);
+  --text-quaternary: rgba(60, 60, 67, 0.18);
+  --bg-transparent: rgba(255, 255, 255, 0);
+  --Charts-series-1: rgb(55, 109, 245);
+  --Charts-series-2: rgb(100, 223, 223);
+  --Charts-series-3: rgb(246, 135, 105);
+  --Charts-series-4: rgb(193, 97, 226);
+  --Charts-series-5: rgb(249, 199, 79);
+  --Charts-series-6: rgb(248, 98, 155);
+  --Charts-series-7: rgb(116, 208, 98);
+  --Charts-series-8: rgb(132, 167, 255);
+  --Charts-series-9: rgb(249, 65, 68);
+  --border-divider-in-card: rgba(34, 36, 38, 0.1);
+  --bg-primary-subtle: rgba(0, 93, 147, 0.2);
+  --bg-accent-subtle: rgba(55, 48, 163, 0.2);
+  --bg-info-subtle: rgba(0, 131, 210, 0.2);
+  --bg-tertiary-subtle: rgba(226, 231, 235, 0.2);
+  --bg-success-subtle: rgba(44, 84, 32, 0.2);
+  --bg-warning-subtle: rgba(138, 90, 9, 0.2);
+  --bg-danger-subtle: rgba(174, 6, 6, 0.2);
+  --bg-light-subtle: rgba(226, 231, 235, 0.2);
+  --Interaction-isHover: 0;
+  --border-transparent: rgba(255, 255, 255, 0);
+  --blue-gradient: rgba(29, 117, 188, 0.56);
+  --enable-dark-mode: 0;
+  --enable-shadows: 1;
+  --enable-gradients: 1;
+  --border-radius-circle: 10000px;
+  --border-radius-pill: 999px;
+  --Display: 1;
+  --border-width-sm: 0.5px;
+  --border-width-default: 1px;
+  --border-width-lg: 4px;
+  --border-height-sm: 0.5px;
+  --border-height-md: 1px;
+  --border-height-lg: 3px;
+  --border-style: "solid";
+  --font-sans-serif: "IBM Plex Sans";
+  --font-monospace: "IBM Plex Mono";
+  --font-serif: "IBM Plex Serif";
+  --font-display: "Inter Display";
+  --font-family-fa: "Font Awesome 5 Free";
+  --font-size-root: "NULL";
+
+  /* Fallback aliases formerly on global selector */
+  --Interaction-selected-background: var(--bg-info-subtle);
+  --Interaction-hover-background: var(--gray-600);
+  --border-success: var(--bg-hover-success);
+  --border-warning: var(--bg-hover-warning);
+  --border-danger: var(--bg-hover-danger);
+  --border-active: var(--bg-active);
+  --border-hover: var(--bg-info-subtle);
+  --bg-dark-subtle: var(--gray-200);
+  --bg-hover-alt: rgba(218, 222, 224, 0.2);
+  --Interaction-secondary-hover: var(--gray-600);
+  --Interaction-secondary-active: var(--Interaction-secondary-hover);
+  --Interaction-secondary-focused: var(--Interaction-secondary-hover);
+  --Interaction-tertiary-active: var(--Interaction-tertiary-hover);
+  --Interaction-tertiary-focused: var(--Interaction-tertiary-hover);
+  --Interaction-success-hover: var(--Special-success-dark);
+  --Interaction-warning-hover: var(--Special-warning-dark);
+  --Interaction-danger-hover: var(--Special-danger-dark);
+  --text-on-brand: var(--text-inverted);
+  --padding-lg: var(--spacer-lg);
+  --padding-xxl: var(--spacer-xxl);
+  --body-font-family: var(--font-sans-serif);
+  --font-family-code: var(--font-monospace);
+}
+
+/* ========================================= */
+/* ATOMIC VARIABLES (Base Layer) */
+/* Theme-specific values that override :root */
+/* ========================================= */
+
+/* Collection: Colors */
+[data-Colors="Light"],
+[data-Colors="Light"] * {
+  --cas-yellow: rgb(205, 168, 113);
+  --cas-brown: rgb(14, 8, 0);
+  --cas-white: rgb(255, 255, 255);
+  --cas-black: rgb(38, 37, 34);
+  --cf-blue-light: rgb(0, 173, 239);
+  --cf-blue-dark: rgb(29, 117, 188);
+  --cf-purple: rgb(44, 47, 117);
+  --text-quaternary: rgba(60, 60, 67, 0.18);
+  --bg-transparent: rgba(255, 255, 255, 0);
+  --Charts-series-1: rgb(55, 109, 245);
+  --Charts-series-2: rgb(100, 223, 223);
+  --Charts-series-3: rgb(246, 135, 105);
+  --Charts-series-4: rgb(193, 97, 226);
+  --Charts-series-5: rgb(249, 199, 79);
+  --Charts-series-6: rgb(248, 98, 155);
+  --Charts-series-7: rgb(116, 208, 98);
+  --Charts-series-8: rgb(132, 167, 255);
+  --Charts-series-9: rgb(249, 65, 68);
+  --border-divider-in-card: rgba(34, 36, 38, 0.1);
+  --bg-primary-subtle: rgba(0, 93, 147, 0.2);
+  --bg-accent-subtle: rgba(55, 48, 163, 0.2);
+  --bg-info-subtle: rgba(0, 131, 210, 0.2);
+  --bg-tertiary-subtle: rgba(226, 231, 235, 0.2);
+  --bg-success-subtle: rgba(44, 84, 32, 0.2);
+  --bg-warning-subtle: rgba(138, 90, 9, 0.2);
+  --bg-danger-subtle: rgba(174, 6, 6, 0.2);
+  --bg-light-subtle: rgba(226, 231, 235, 0.2);
+  --Interaction-isHover: 0;
+  --border-transparent: rgba(255, 255, 255, 0);
+  --blue-gradient: rgba(29, 117, 188, 0.56);
+  --enable-dark-mode: 0;
+  --enable-shadows: 1;
+  --enable-gradients: 1;
+}
+
+[data-Colors="Dark"],
+[data-Colors="Dark"] * {
+  --cas-yellow: rgb(255, 210, 143);
+  --cas-brown: rgb(233, 233, 233);
+  --cas-white: rgb(255, 255, 255);
+  --cas-black: rgb(38, 37, 34);
+  --cf-blue-light: rgb(0, 185, 255);
+  --cf-blue-dark: rgb(38, 158, 255);
+  --cf-purple: rgb(95, 101, 255);
+  --text-quaternary: rgba(188, 188, 211, 0.18);
+  --bg-transparent: rgba(0, 0, 0, 0);
+  --Charts-series-1: rgb(55, 109, 245);
+  --Charts-series-2: rgb(100, 223, 223);
+  --Charts-series-3: rgb(246, 135, 105);
+  --Charts-series-4: rgb(193, 97, 226);
+  --Charts-series-5: rgb(253, 208, 122);
+  --Charts-series-6: rgb(248, 98, 155);
+  --Charts-series-7: rgb(116, 208, 98);
+  --Charts-series-8: rgb(132, 167, 255);
+  --Charts-series-9: rgb(249, 65, 68);
+  --border-divider-in-card: rgba(34, 36, 38, 0.9);
+  --bg-primary-subtle: rgba(182, 230, 255, 0.2);
+  --bg-accent-subtle: rgba(202, 199, 254, 0.2);
+  --bg-info-subtle: rgba(45, 189, 255, 0.2);
+  --bg-tertiary-subtle: rgba(67, 79, 91, 0.2);
+  --bg-success-subtle: rgba(192, 233, 173, 0.2);
+  --bg-warning-subtle: rgba(254, 255, 133, 0.2);
+  --bg-danger-subtle: rgba(255, 193, 193, 0.2);
+  --bg-light-subtle: rgba(23, 23, 23, 0.2);
+  --Interaction-isHover: 0;
+  --border-transparent: rgba(255, 255, 255, 0);
+  --blue-gradient: rgba(185, 228, 254, 0.56);
+  --enable-dark-mode: 1;
+  --enable-shadows: 1;
+  --enable-gradients: 1;
+}
+
+/* Collection: Sizing */
+[data-Sizing="Desktop"],
+[data-Sizing="Desktop"] * {
+  --border-radius-circle: 10000px;
+  --border-radius-pill: 999px;
+  --Display: 1;
+  --border-width-sm: 0.5px;
+  --border-width-default: 1px;
+  --border-width-lg: 4px;
+  --border-height-sm: 0.5px;
+  --border-height-md: 1px;
+  --border-height-lg: 3px;
+  --border-style: "solid";
+}
+
+[data-Sizing="Compact"],
+[data-Sizing="Compact"] * {
+  --border-radius-circle: 10000px;
+  --border-radius-pill: 999px;
+  --Display: 0;
+  --border-width-sm: 0.5px;
+  --border-width-default: 1px;
+  --border-width-lg: 4px;
+  --border-height-sm: 0.25px;
+  --border-height-md: 0.5px;
+  --border-height-lg: 1.5px;
+  --border-style: "solid";
+}
+
+/* Collection: Fonts */
+[data-Fonts="Default"],
+[data-Fonts="Default"] * {
+  --font-sans-serif: "IBM Plex Sans";
+  --font-monospace: "IBM Plex Mono";
+  --font-serif: "IBM Plex Serif";
+  --font-display: "Inter Display";
+  --font-family-fa: "Font Awesome 5 Free";
+}
+
+[data-Fonts="Wireframe"],
+[data-Fonts="Wireframe"] * {
+  --font-sans-serif: "Flow Circular";
+  --font-monospace: "Flow Circular";
+  --font-serif: "Flow Circular";
+  --font-display: "Flow Circular";
+  --font-family-fa: "Font Awesome 5 Free";
+}
+
+/* Collection: Typography */
+[data-Typography="Default"],
+[data-Typography="Default"] * {
+  --font-size-root: "NULL";
+}
+
+/* ========================================= */
+/* ALIAS VARIABLES (Semantic Layer) */
+/* ========================================= */
+
+/* Collection: Colors - Aliases */
+[data-Colors="Light"],
+[data-Colors="Light"] * {
+  --Interaction-selected-background: var(--bg-info-subtle);
+  --Interaction-hover-background: var(--gray-600);
+  --border-success: var(--bg-hover-success);
+  --border-warning: var(--bg-hover-warning);
+  --border-danger: var(--bg-hover-danger);
+  --border-active: var(--bg-active);
+  --border-hover: var(--bg-info-subtle);
+  --bg-dark-subtle: var(--gray-200);
+  --bg-hover-alt: rgba(218, 222, 224, 0.2);
+  --Interaction-secondary-hover: var(--gray-600);
+  --Interaction-secondary-active: var(--Interaction-secondary-hover);
+  --Interaction-secondary-focused: var(--Interaction-secondary-hover);
+  --Interaction-tertiary-active: var(--Interaction-tertiary-hover);
+  --Interaction-tertiary-focused: var(--Interaction-tertiary-hover);
+  --Interaction-success-hover: var(--Special-success-dark);
+  --Interaction-warning-hover: var(--Special-warning-dark);
+  --Interaction-danger-hover: var(--Special-danger-dark);
+  --text-on-brand: var(--text-inverted);
+}
+
+[data-Colors="Dark"],
+[data-Colors="Dark"] * {
+  --Interaction-selected-background: var(--bg-info-subtle);
+  --Interaction-hover-background: var(--gray-200);
+  --border-active: var(--bg-active);
+  --border-hover: var(--bg-info-subtle);
+  --bg-dark-subtle: var(--gray-800);
+  --bg-hover-alt: var(--gray-600);
+  --Interaction-secondary-hover: var(--gray-200);
+  --Interaction-secondary-active: var(--Interaction-secondary-hover);
+  --Interaction-secondary-focused: var(--Interaction-secondary-hover);
+  --Interaction-tertiary-active: var(--Interaction-tertiary-hover);
+  --Interaction-tertiary-focused: var(--Interaction-tertiary-hover);
+  --Interaction-success-hover: var(--Special-success-light);
+  --Interaction-warning-hover: var(--Special-warning-light);
+  --Interaction-danger-hover: var(--Special-danger-light);
+  --text-on-brand: var(--text-inverted);
+}
+
+/* Collection: Sizing - Aliases */
+[data-Sizing="Desktop"],
+[data-Sizing="Desktop"] * {
+  --padding-lg: var(--spacer-lg);
+  --padding-xxl: var(--spacer-xxl);
+}
+
+[data-Sizing="Compact"],
+[data-Sizing="Compact"] * {
+  --padding-lg: var(--spacer-lg);
+  --padding-xxl: var(--spacer-xxl);
+}
+
+/* Collection: Fonts - Aliases */
+[data-Fonts="Default"],
+[data-Fonts="Default"] * {
+  --body-font-family: var(--font-sans-serif);
+  --font-family-code: var(--font-monospace);
+}
+
+[data-Fonts="Wireframe"],
+[data-Fonts="Wireframe"] * {
+  --body-font-family: var(--font-sans-serif);
+  --font-family-code: "Flow Circular";
+}
+
+/* Collection: Typography - Aliases */
+[data-Typography="Default"],
+[data-Typography="Default"] * {
+}
+
+/* ========================================= */
+/* USAGE EXAMPLES */
+/* ========================================= */
+
+/*
+DYNAMIC MODE SWITCHING:
+
+<!-- Colors Collection -->
+<div data-Colors="Light">Content in Light mode</div>
+<div data-Colors="Dark">Content in Dark mode</div>
+
+<!-- Sizing Collection -->
+<div data-Sizing="Desktop">Content in Desktop mode</div>
+<div data-Sizing="Compact">Content in Compact mode</div>
+
+<!-- Fonts Collection -->
+<div data-Fonts="Default">Content in Default mode</div>
+<div data-Fonts="Wireframe">Content in Wireframe mode</div>
+
+<!-- Typography Collection -->
+<div data-Typography="Default">Content in Default mode</div>
+
+MULTI-MODE SWITCHING:
+<div data-theme="light" data-size="large" data-prominence="primary">
+  Content with multiple mode attributes
+</div>
+
+VARIABLE USAGE IN CSS:
+.my-component {
+  color: var(--cas-yellow);
+  color: var(--cas-brown);
+  color: var(--cas-white);
+}
+*/
+
+/* CSS Custom Property Validation */
+@supports (color: var(--test)) {
+  /* Modern browsers with CSS custom property support */
+  .css-variables-supported {
+    display: block;
+  }
+}
+
+@supports not (color: var(--test)) {
+  /* Fallback for older browsers */
+  .css-variables-not-supported {
+    display: block;
+  }
+  .css-variables-supported {
+    display: none;
+  }
+}
