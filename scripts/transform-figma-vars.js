@@ -47,6 +47,7 @@ export function transformFigmaVariables(data) {
 
   const light = {};
   const dark = {};
+  let unresolvedCount = 0;
 
   for (const variable of allVariables) {
     const parts = nameToParts(variable.name);
@@ -61,6 +62,10 @@ export function transformFigmaVariables(data) {
 
       if (rawValue && typeof rawValue === 'object' && rawValue.type === 'VARIABLE_ALIAS') {
         const refPath = idToPath[rawValue.id];
+        if (!refPath) {
+          unresolvedCount++;
+          continue; // Skip tokens that reference external library variables
+        }
         token = { $value: `{${refPath}}`, $type: variable.resolvedType.toLowerCase() };
       } else if (variable.resolvedType === 'COLOR' && typeof rawValue === 'object') {
         token = { $value: rgbaToHex(rawValue), $type: 'color' };
@@ -77,6 +82,10 @@ export function transformFigmaVariables(data) {
       const target = modeName === 'light' ? light : dark;
       buildNestedPath(target, parts, token);
     }
+  }
+
+  if (unresolvedCount > 0) {
+    console.warn(`Warning: ${unresolvedCount} alias references could not be resolved (external library variables). These tokens were skipped.`);
   }
 
   return { light, dark };

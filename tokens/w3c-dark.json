@@ -31,113 +31,17 @@
       "$type": "color"
     }
   },
-  "gray": {
-    "0": {
-      "$value": "{undefined}",
+  "text": {
+    "quaternary": {
+      "$value": "rgba(188, 188, 211, 0.18)",
       "$type": "color"
     },
-    "50": {
-      "$value": "{undefined}",
-      "$type": "color"
-    },
-    "100": {
-      "$value": "{undefined}",
-      "$type": "color"
-    },
-    "200": {
-      "$value": "{undefined}",
-      "$type": "color"
-    },
-    "300": {
-      "$value": "{undefined}",
-      "$type": "color"
-    },
-    "400": {
-      "$value": "{undefined}",
-      "$type": "color"
-    },
-    "500": {
-      "$value": "{undefined}",
-      "$type": "color"
-    },
-    "600": {
-      "$value": "{undefined}",
-      "$type": "color"
-    },
-    "700": {
-      "$value": "{undefined}",
-      "$type": "color"
-    },
-    "800": {
-      "$value": "{undefined}",
-      "$type": "color"
-    },
-    "900": {
-      "$value": "{undefined}",
-      "$type": "color"
-    },
-    "950": {
-      "$value": "{undefined}",
-      "$type": "color"
-    },
-    "1000": {
-      "$value": "{undefined}",
+    "on-brand": {
+      "$value": "{text.inverted}",
       "$type": "color"
     }
   },
   "bg": {
-    "primary": {
-      "$value": "{undefined}",
-      "$type": "color"
-    },
-    "canvas": {
-      "$value": "{undefined}",
-      "$type": "color"
-    },
-    "secondary": {
-      "$value": "{undefined}",
-      "$type": "color"
-    },
-    "tertiary": {
-      "$value": "{undefined}",
-      "$type": "color"
-    },
-    "inverted": {
-      "$value": "{undefined}",
-      "$type": "color"
-    },
-    "brand": {
-      "$value": "{undefined}",
-      "$type": "color"
-    },
-    "accent": {
-      "$value": "{undefined}",
-      "$type": "color"
-    },
-    "info": {
-      "$value": "{undefined}",
-      "$type": "color"
-    },
-    "active": {
-      "$value": "{undefined}",
-      "$type": "color"
-    },
-    "success": {
-      "$value": "{undefined}",
-      "$type": "color"
-    },
-    "warning": {
-      "$value": "{undefined}",
-      "$type": "color"
-    },
-    "danger": {
-      "$value": "{undefined}",
-      "$type": "color"
-    },
-    "disabled": {
-      "$value": "{undefined}",
-      "$type": "color"
-    },
     "transparent": {
       "$value": "rgba(0, 0, 0, 0)",
       "$type": "color"
@@ -178,244 +82,8 @@
       "$value": "{gray.800}",
       "$type": "color"
     },
-    "hover": {
-      "$value": "{undefined}",
-      "$type": "color"
-    },
     "hover-alt": {
       "$value": "{gray.600}",
-      "$type": "color"
-    },
-    "hover-brand": {
-      "$value": "{undefined}",
-      "$type": "color"
-    },
-    "hover-accent": {
-      "$value": "{undefined}",
-      "$type": "color"
-    },
-    "hover-info": {
-      "$value": "{undefined}",
-      "$type": "color"
-    },
-    "hover-success": {
-      "$value": "{undefined}",
-      "$type": "color"
-    },
-    "hover-warning": {
-      "$value": "{undefined}",
-      "$type": "color"
-    },
-    "hover-danger": {
-      "$value": "{undefined}",
-      "$type": "color"
-    }
-  },
-  "icons": {
-    "primary": {
-      "$value": "{undefined}",
-      "$type": "color"
-    },
-    "secondary": {
-      "$value": "{undefined}",
-      "$type": "color"
-    },
-    "inverted": {
-      "$value": "{undefined}",
-      "$type": "color"
-    },
-    "disabled": {
-      "$value": "{undefined}",
-      "$type": "color"
-    },
-    "gradient-stop-1": {
-      "$value": "{undefined}",
-      "$type": "color"
-    },
-    "gradient-stop-2": {
-      "$value": "{undefined}",
-      "$type": "color"
-    }
-  },
-  "text": {
-    "primary": {
-      "$value": "{undefined}",
-      "$type": "color"
-    },
-    "secondary": {
-      "$value": "{undefined}",
-      "$type": "color"
-    },
-    "tertiary": {
-      "$value": "{undefined}",
-      "$type": "color"
-    },
-    "quaternary": {
-      "$value": "rgba(188, 188, 211, 0.18)",
-      "$type": "color"
-    },
-    "emphasis": {
-      "$value": "{undefined}",
-      "$type": "color"
-    },
-    "link": {
-      "$value": "{undefined}",
-      "$type": "color"
-    },
-    "link-hover": {
-      "$value": "{undefined}",
-      "$type": "color"
-    },
-    "inverted": {
-      "$value": "{undefined}",
-      "$type": "color"
-    },
-    "placeholder": {
-      "$value": "{undefined}",
-      "$type": "color"
-    },
-    "disabled": {
-      "$value": "{undefined}",
-      "$type": "color"
-    },
-    "label-secondary": {
-      "$value": "{undefined}",
-      "$type": "color"
-    },
-    "brand": {
-      "$value": "{undefined}",
-      "$type": "color"
-    },
-    "active": {
-      "$value": "{undefined}",
-      "$type": "color"
-    },
-    "accent": {
-      "$value": "{undefined}",
-      "$type": "color"
-    },
-    "info": {
-      "$value": "{undefined}",
-      "$type": "color"
-    },
-    "success": {
-      "$value": "{undefined}",
-      "$type": "color"
-    },
-    "warning": {
-      "$value": "{undefined}",
-      "$type": "color"
-    },
-    "danger": {
-      "$value": "{undefined}",
-      "$type": "color"
-    },
-    "hover-brand": {
-      "$value": "{undefined}",
-      "$type": "color"
-    },
-    "hover-placeholder": {
-      "$value": "{undefined}",
-      "$type": "color"
-    },
-    "on-brand": {
-      "$value": "{text.inverted}",
-      "$type": "color"
-    }
-  },
-  "accent": {
-    "primary": {
-      "$value": "{undefined}",
-      "$type": "color"
-    },
-    "primary-light": {
-      "$value": "{undefined}",
-      "$type": "color"
-    },
-    "primary-lighter": {
-      "$value": "{undefined}",
-      "$type": "color"
-    }
-  },
-  "special": {
-    "info": {
-      "$value": "{undefined}",
-      "$type": "color"
-    },
-    "info-dark": {
-      "$value": "{undefined}",
-      "$type": "color"
-    },
-    "info-light": {
-      "$value": "{undefined}",
-      "$type": "color"
-    },
-    "info-secondary": {
-      "$value": "{undefined}",
-      "$type": "color"
-    },
-    "danger": {
-      "$value": "{undefined}",
-      "$type": "color"
-    },
-    "danger-dark": {
-      "$value": "{undefined}",
-      "$type": "color"
-    },
-    "danger-light": {
-      "$value": "{undefined}",
-      "$type": "color"
-    },
-    "danger-secondary": {
-      "$value": "{undefined}",
-      "$type": "color"
-    },
-    "warning": {
-      "$value": "{undefined}",
-      "$type": "color"
-    },
-    "warning-dark": {
-      "$value": "{undefined}",
-      "$type": "color"
-    },
-    "warning-light": {
-      "$value": "{undefined}",
-      "$type": "color"
-    },
-    "warning-secondary": {
-      "$value": "{undefined}",
-      "$type": "color"
-    },
-    "success": {
-      "$value": "{undefined}",
-      "$type": "color"
-    },
-    "success-dark": {
-      "$value": "{undefined}",
-      "$type": "color"
-    },
-    "success-light": {
-      "$value": "{undefined}",
-      "$type": "color"
-    },
-    "success-secondary": {
-      "$value": "{undefined}",
-      "$type": "color"
-    },
-    "orange": {
-      "$value": "{undefined}",
-      "$type": "color"
-    },
-    "orange-dark": {
-      "$value": "{undefined}",
-      "$type": "color"
-    },
-    "orange-light": {
-      "$value": "{undefined}",
-      "$type": "color"
-    },
-    "orange-secondary": {
-      "$value": "{undefined}",
       "$type": "color"
     }
   },
@@ -440,10 +108,6 @@
       "$value": "{interaction.secondary-hover}",
       "$type": "color"
     },
-    "tertiary-hover": {
-      "$value": "{undefined}",
-      "$type": "color"
-    },
     "tertiary-active": {
       "$value": "{interaction.tertiary-hover}",
       "$type": "color"
@@ -462,10 +126,6 @@
     },
     "danger-hover": {
       "$value": "{special.danger-light}",
-      "$type": "color"
-    },
-    "accent-hover": {
-      "$value": "{undefined}",
       "$type": "color"
     },
     "ishover": {
@@ -512,38 +172,6 @@
     }
   },
   "border": {
-    "primary": {
-      "$value": "{undefined}",
-      "$type": "color"
-    },
-    "secondary": {
-      "$value": "{undefined}",
-      "$type": "color"
-    },
-    "info": {
-      "$value": "{undefined}",
-      "$type": "color"
-    },
-    "brand": {
-      "$value": "{undefined}",
-      "$type": "color"
-    },
-    "accent": {
-      "$value": "{undefined}",
-      "$type": "color"
-    },
-    "success": {
-      "$value": "{undefined}",
-      "$type": "color"
-    },
-    "warning": {
-      "$value": "{undefined}",
-      "$type": "color"
-    },
-    "danger": {
-      "$value": "{undefined}",
-      "$type": "color"
-    },
     "active": {
       "$value": "{bg.active}",
       "$type": "color"
@@ -552,42 +180,12 @@
       "$value": "{bg.info-subtle}",
       "$type": "color"
     },
-    "disabled": {
-      "$value": "{undefined}",
-      "$type": "color"
-    },
-    "on-inverted": {
-      "$value": "{undefined}",
-      "$type": "color"
-    },
-    "on-brand": {
-      "$value": "{undefined}",
-      "$type": "color"
-    },
-    "on-accent": {
-      "$value": "{undefined}",
-      "$type": "color"
-    },
-    "divider": {
-      "$value": "{undefined}",
-      "$type": "color"
-    },
     "divider-in-card": {
       "$value": "rgba(34, 36, 38, 0.9)",
       "$type": "color"
     },
     "transparent": {
       "$value": "rgba(255, 255, 255, 0)",
-      "$type": "color"
-    }
-  },
-  "callouts": {
-    "text": {
-      "$value": "{undefined}",
-      "$type": "color"
-    },
-    "background": {
-      "$value": "{undefined}",
       "$type": "color"
     }
   },
