@@ -1,0 +1,16 @@
+{
+  "name": "sheetrock-design-system",
+  "version": "1.0.0",
+  "description": "Component Assembly Systems design token library",
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.js",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "style-dictionary": "^3.9.2"
+  },
+  "devDependencies": {
+    "vitest": "^1.6.0"
+  }
+}
