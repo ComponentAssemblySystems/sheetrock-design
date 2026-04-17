@@ -115,4 +115,48 @@ describe('transformFigmaVariables', () => {
     const { light } = transformFigmaVariables(fixture);
     expect(light.text.primary.$value).toBe('{cas.white}');
   });
+
+  it('skips tokens with unresolvable external aliases', () => {
+    const fixtureWithExternal = {
+      schemaVersion: 1,
+      collections: [
+        {
+          id: 'VariableCollectionId:4:2',
+          name: 'Colors',
+          modes: [
+            { name: 'Light', modeId: '50:0' },
+            { name: 'Dark', modeId: '437:1' }
+          ],
+          variableIds: ['VariableID:1:1', 'VariableID:ext:1']
+        }
+      ],
+      variables: [
+        {
+          id: 'VariableID:1:1',
+          name: 'cas/white',
+          resolvedType: 'COLOR',
+          valuesByMode: {
+            '50:0': { r: 1, g: 1, b: 1, a: 1 },
+            '437:1': { r: 1, g: 1, b: 1, a: 1 }
+          },
+          variableCollectionId: 'VariableCollectionId:4:2'
+        },
+        {
+          id: 'VariableID:ext:1',
+          name: 'text/primary',
+          resolvedType: 'COLOR',
+          valuesByMode: {
+            '50:0': { type: 'VARIABLE_ALIAS', id: 'VariableID:external-library-hash/4:38' },
+            '437:1': { type: 'VARIABLE_ALIAS', id: 'VariableID:external-library-hash/4:39' }
+          },
+          variableCollectionId: 'VariableCollectionId:4:2'
+        }
+      ]
+    };
+    const { light } = transformFigmaVariables(fixtureWithExternal);
+    // text/primary should be skipped, not emit {undefined}
+    expect(light.text).toBeUndefined();
+    // cas/white should still be present
+    expect(light.cas.white.$value).toBe('#ffffff');
+  });
 });
