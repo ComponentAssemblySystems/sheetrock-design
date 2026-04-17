@@ -3,6 +3,7 @@
 export function makeConfig(tokensPath, selector, { includeAssets = false } = {}) {
   /* Strip $-prefixed W3C keys to plain keys for Style Dictionary v3 */
   const stripDollar = (obj) => {
+    if (Array.isArray(obj)) return obj.map(stripDollar);
     if (typeof obj !== 'object' || obj === null) return obj;
     const out = {};
     for (const [k, v] of Object.entries(obj)) {
@@ -28,7 +29,7 @@ export function makeConfig(tokensPath, selector, { includeAssets = false } = {})
 
   /* Remove any token whose value is an alias reference to a path not in the token set.
    * Style Dictionary v3 throws a hard error on unresolved references, so we must drop them. */
-  const dropBrokenAliases = (obj, validPaths, prefix = '') => {
+  const dropBrokenAliases = (obj, validPaths, prefix = '', dropped = new Set()) => {
     const out = {};
     for (const [k, v] of Object.entries(obj)) {
       const path = prefix ? `${prefix}.${k}` : k;
@@ -36,11 +37,14 @@ export function makeConfig(tokensPath, selector, { includeAssets = false } = {})
         const val = v.value;
         if (typeof val === 'string' && val.startsWith('{') && val.endsWith('}')) {
           const refPath = val.slice(1, -1);
-          if (!validPaths.has(refPath)) continue; // Drop unresolvable alias
+          if (!validPaths.has(refPath)) {
+            dropped.add(path); // Track dropped paths for warning
+            continue; // Drop unresolvable alias
+          }
         }
         out[k] = v;
       } else if (v && typeof v === 'object') {
-        const nested = dropBrokenAliases(v, validPaths, path);
+        const nested = dropBrokenAliases(v, validPaths, path, dropped);
         if (Object.keys(nested).length > 0) out[k] = nested;
       } else {
         out[k] = v;
@@ -58,6 +62,7 @@ export function makeConfig(tokensPath, selector, { includeAssets = false } = {})
         {
           destination: `tokens-${selector.replace(/[^a-z]/g, '')}.css`,
           format: 'css/variables',
+          filter: (token) => token.type !== 'boolean' && token.type !== 'string' && token.type !== 'fontfamily',
           options: {
             selector,
             outputReferences: false
@@ -90,11 +95,15 @@ export function makeConfig(tokensPath, selector, { includeAssets = false } = {})
           // Iteratively drop broken aliases until stable — handles chained references
           // where token A → token B → (broken), so A must also be dropped after B is removed
           let current = stripped;
+          const dropped = new Set();
           for (let i = 0; i < 10; i++) {
             const validPaths = collectPaths(current);
-            const next = dropBrokenAliases(current, validPaths);
+            const next = dropBrokenAliases(current, validPaths, '', dropped);
             if (JSON.stringify(next) === JSON.stringify(current)) break;
             current = next;
+          }
+          if (dropped.size > 0) {
+            console.warn(`[build] ${dropped.size} token(s) dropped due to broken alias references: ${[...dropped].join(', ')}`);
           }
           return current;
         }
