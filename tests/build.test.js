@@ -1,3 +1,5 @@
+// Prerequisite: run `npm run build` before `npm test`.
+// These tests read the committed dist/ files — they do not re-run the build.
 import { describe, it, expect } from 'vitest';
 import { readFileSync, existsSync } from 'fs';
 
@@ -21,13 +23,16 @@ describe('dist/ output files', () => {
     expect(css).toMatch(/--[\w-]+:\s*.+;/);
   });
 
-  it('dist/tokens.json exists and is valid JSON', () => {
+  it('dist/tokens.json exists, is valid JSON, and has tokens', () => {
     expect(existsSync('dist/tokens.json')).toBe(true);
     const raw = readFileSync('dist/tokens.json', 'utf8');
-    expect(() => JSON.parse(raw)).not.toThrow();
+    const parsed = JSON.parse(raw);
+    expect(Object.keys(parsed).length).toBeGreaterThan(0);
   });
 
-  it('dist/tokens.js exists', () => {
+  it('dist/tokens.js exists and exports named constants', () => {
     expect(existsSync('dist/tokens.js')).toBe(true);
+    const js = readFileSync('dist/tokens.js', 'utf8');
+    expect(js).toMatch(/^export const \w+/m);
   });
 });
