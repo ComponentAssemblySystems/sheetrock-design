@@ -1,0 +1,14 @@
+{
+  "codeConnect": {
+    "include": ["src/components/**/*.figma.tsx"],
+    "exclude": ["node_modules/**"],
+    "components": {
+      "Button": {
+        "props": {
+          "label": "string",
+          "variant": "enum"
+        }
+      }
+    }
+  }
+}
