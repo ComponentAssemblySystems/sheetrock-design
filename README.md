@@ -67,9 +67,19 @@ dist/tokens.json
 dist/tokens.js
 ```
 
+## Claude Code commands
+
+| Command | Purpose |
+|---|---|
+| `/sync-tokens` | Fetch Figma variables → rebuild all `dist/` outputs |
+| `/connect` | Generate + publish Figma Code Connect for components in `src/components/` |
+| `/build` | Run `npm run build` + `npm test` and summarize results |
+
+Commands live in `.claude/commands/` and are available in any Claude Code session in this repo.
+
 ## Syncing tokens from Figma
 
-Run `/sync-tokens` in Claude Code. This fetches the latest variables via the Figma MCP, overwrites `tokens/figma-variables.json`, and rebuilds `dist/`.
+Run `/sync-tokens` in Claude Code. This fetches the latest variables via the Figma MCP (file `EM5KcfOyqRBsPTRkbvT5Kn`), overwrites `tokens/figma-variables.json`, and rebuilds `dist/`.
 
 Then review the diff and commit:
 
