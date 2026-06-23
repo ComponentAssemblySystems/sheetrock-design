@@ -45,10 +45,13 @@ Source of truth is Figma. To update tokens:
 
 ## Slash Commands
 
+Commands live in `.claude/commands/`. All three are available in any Claude Code session in this repo.
+
 | Command | Purpose |
 |---|---|
-| `/sync-tokens` | Pull Figma variables → rebuild all dist/ outputs |
-| `/connect` | Generate + publish Figma Code Connect for components in `src/components/` |
+| `/sync-tokens` | Fetch variables from Figma file `EM5KcfOyqRBsPTRkbvT5Kn` → overwrite `tokens/figma-variables.json` → rebuild `dist/` |
+| `/connect` | Generate `.figma.tsx` Code Connect files for uncovered components → publish to Figma |
+| `/build` | Run `npm run build` + `npm test`, summarize pass/fail and any dropped alias warnings |
 
 ## Deploy
 
