@@ -1,0 +1,17 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "Build Tokens",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "build"],
+      "port": null
+    },
+    {
+      "name": "Test Watch",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["vitest"],
+      "port": null
+    }
+  ]
+}
