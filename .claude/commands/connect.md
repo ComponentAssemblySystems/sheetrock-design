@@ -1,3 +1,5 @@
+# Connect
+
 Generate and publish Figma Code Connect mappings for all React components in src/components/.
 
 Steps:

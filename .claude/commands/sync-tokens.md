@@ -1,3 +1,5 @@
+# Sync Tokens
+
 Pull the latest Figma variables into this design system and rebuild the token outputs.
 
 Steps:
