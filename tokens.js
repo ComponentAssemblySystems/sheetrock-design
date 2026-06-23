@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Tue, 21 Apr 2026 01:08:30 GMT
+ * Generated on Tue, 23 Jun 2026 17:17:16 GMT
  */
 
 export const CasYellow = "#cda871";
